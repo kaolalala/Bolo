@@ -1,7 +1,7 @@
 {
   "name": "Bolo",
   "version": "1.0.0",
-  "description": "for the website Bolo\r NW2019 \r first cooperation",
+  "description": "for the website Bolo NW2019  first cooperation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

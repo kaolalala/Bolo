@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 1vw;
+}
+body{
+    background-image: url(../images/kaola/背景.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    position: relative;
+}
+.top{
+    height: 10.4vw;
+    width: 100%;
+    /* background-color: black; */
+}
+.return{
+    width: 9.3vw;
+    height: 5.3vw;
+    background-image: url(../images/kaola/return.png);
+    background-size: 100% 100%;
+    position: relative;
+    left: 5.6vw;
+    top: 5vw;
+}
+.logo{
+    height: 56.3vw;
+}
+.square{
+    width: 29.3vw;
+    height: 29.3vw;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.bolo{
+    width: 21.3vw;
+    height: 24vw;
+    background-image: url(../images/kaola/bolo.png);
+    background-size: 100% 100%;
+    position: relative;
+    left: 6vw;
+    top: 2vw;
+}
+.down{
+    height: 94.4vw;
+    background-color: white;
+    top: 66.7vw;
+}
+.main{
+    height: 138vw;
+    width: 92vw;
+    background-color: white;
+    position: relative;
+    top: -22.4vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 1vw;
+    border-radius: 4.8vw 4.8vw 0 0;
+    box-shadow: 0 0.8vw 1.6vw rgb(193, 193, 193);
+}
+.table{
+    width: 61.9vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+input{
+    width: 100%;
+    display: block;
+    border-width: 0 0 1px 0;
+    border-color: #999;
+    border-radius: 0;
+    margin-top: 7vw;
+    height: 8vw;
+    outline: none;
+    font-size: 16px;
+}
+.forget{
+    font-size: 14px;
+    text-align: right;
+    color: rgb(107, 107, 107);
+    margin-top: 1vw;
+}
+.login{
+    background-color: rgb(255, 218, 31);
+    height: 7.7vw;
+    width: 31vw;
+    font-size: 16px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    border-radius: 5.3vw;
+    line-height: 7.7vw;
+    margin-top: 8.5vw;
+}
+.social{
+    height: 21.3vw;
+    border-width: 1px 0 0 0;
+    border-color: rgb(131, 131, 131);
+    border-style: solid;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 11vw;
+    width: 80%;
+    /* padding: 0 6%; */
+    box-sizing: border-box;
+    position: relative;
+}
+.software{
+    height: 48%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.social>div>div{
+    display: inline-block;
+    /* width: 20%; */
+    /* margin: auto 4.6vw; */
+    /* background-color: black; */
+    /* height: 100%; */
+    background-size: 100% 100%;
+}
+.weibo{
+    background-image: url(../images/kaola/weibo.png);
+    width: 14%;
+    height: 88%;
+    margin-left: 8%;
+}
+div.QQ{
+    background-image: url(../images/kaola/QQ.png);
+    width: 11%;
+    height: 92%;
+    margin-left: 23%;
+}
+.wechat{
+    background-image: url(../images/kaola/wechat.png);
+    width: 16%;
+    height: 90%;
+    margin-left: 23%
+}
+.or{
+    width: 30%;
+    height: 20%;
+    background-color: white;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+    top: -12%;
+}
