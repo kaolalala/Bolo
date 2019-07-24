@@ -1,0 +1,27 @@
+{
+  "name": "Bolo",
+  "version": "1.0.0",
+  "description": "for the website Bolo\r NW2019 \r first cooperation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaolalala/Bolo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaolalala/Bolo/issues"
+  },
+  "homepage": "https://github.com/kaolalala/Bolo#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "postcss-cli": "^6.1.3"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

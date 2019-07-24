@@ -1,15 +1,64 @@
+#personal-setting {
+    /* display: none; */
+}
 #setting-title {
     width: 100vw;
     height: 11.67vw;
-    background: rgb(27, 27, 226,0.3);
     position: relative;
 }
-#setting-title span {
-    line-height: 11.67vw;
+#setting-return {
+    width: 15.39vw;
+    height: 100%;
+    background: url(../images/personal/top-return2.png) no-repeat center;
+    background-size: 2.8vw;
     position: absolute;
 }
 #setting-title-text {
-    
+    font-size:2rem;
     margin: 0 auto;
     line-height: 11.67vw;
+    text-align: center;
+}
+.blank-separate {
+    width: 100vw;
+    height: 4.17vw;
+    background: #ececec;
+}
+.usual-setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10.56vw;
+    border-top: 0.15vw solid #ececec;
+    border-bottom: 0.15vw solid #ececec;
+}
+.usual-setting p {
+    font-size: 1.6rem;
+    color: #6e6e6e;
+    margin-left: 3.33vw;
+    letter-spacing: 0.2vw;
+}
+.into-set {
+    width: 10.83vw;
+    height: 100%;
+    line-height: 10.56vw;
+    text-align: center;
+}
+.blank-separate-last {
+    width: 100vw;
+    height: 7.5vw;
+    background: #ececec;
+}
+#exit-account {
+    width: 100vw;
+    height: 10.56vw;
+    border: none;
+    outline: none;
+    /* line-height: 10.56vw; */
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.18vw;
+    /* text-align: center; */
+    background: #fade00;
 }

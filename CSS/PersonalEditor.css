@@ -1,0 +1,90 @@
+#personal-editor {
+    display: none;
+}
+/* 顶部返回 */
+#editor-return {
+    width: 100vw;
+    height: 11.38vw;
+}
+#editor-return-button {
+    width: 11.67vw;
+    height: 100%;
+    text-align: center;
+    line-height: 11.38vw;
+}
+.editor-blank {
+    width: 100vw;
+    height: 3.61vw;
+    background: #ececec;
+}
+/* 头像编辑 */
+#portrait-editor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 25.56vw;
+}
+#head-portrait-editor {
+    width: 20.55vw;
+    height: 20.55vw;
+    line-height: 25.55vw;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 4.17vw;
+    background: url(../images/personal/head-portrait-editor.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+#head-portrait-editor img {
+    width: 9.44vw;
+}
+#head-portrait-editor-cover {
+    width: 20.55vw;
+    height: 20.55vw;
+    border-radius: 50%;
+    background: #898989;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/* 信息编辑 */
+#personal-message-editor {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10.55vw;
+}
+#editor-message-content {
+    font-size: 1.7rem;
+    line-height: 13.28vw;
+    margin-left: 3.53vw;
+}
+#editor-button {
+    width: 15.83vw;
+    height: 100%;
+    font-size: 1.7rem;
+    line-height: 13.28vw;
+    text-align: center;
+}
+.editor-content {
+    width: 100vw;
+    height: 10vw;
+    border-bottom: 0.32vw solid #ececec;
+}
+.editor-content p {
+    height: 100%;
+    font-size: 1.4rem;
+    line-height: 10vw;
+    color: #818181;
+    margin-left: 3.33vw;
+}
+.editor-content p input {
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+}

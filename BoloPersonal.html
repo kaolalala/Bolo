@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/BoloPersonal.css">
     <link rel="stylesheet" href="CSS/PersonalSet.css">
+    <link rel="stylesheet" href="CSS/PersonalEditor.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -74,20 +76,83 @@
     <!-- 个人设置 -->
     <div id="personal-setting">
         <div id="setting-title">
-            <span>&#60;</span>
+            <div id="setting-return"></div>
             <p id="setting-title-text">设置</p>
         </div>
         <div class="blank-separate"></div>
-        <div id="account-manage" class="usual-setting"></div>
-        <div id="account-safety" class="usual-setting"></div>
+        <div id="account-manage" class="usual-setting">
+            <p>帐号管理</p>
+            <div id="account-manage-setting" class="into-set">&#62;</div>
+        </div>
+        <div id="account-safety" class="usual-setting">
+            <p>账号与安全</p>
+            <div id="account-safety-setting" class="into-set">&#62;</div>
+        </div>
         <div class="blank-separate"></div>
-        <div id="message-manage" class="usual-setting"></div>
-        <div id="set-privacy" class="usual-setting"></div>
-        <div id="set-shield" class="usual-setting"></div>
-        <div id="set-sommon" class="usual-setting"></div>
+        <div id="message-manage" class="usual-setting">
+            <p>消息管理</p>
+            <div id="blank-separate-setting" class="into-set">&#62;</div>
+        </div>
+        <div id="set-privacy" class="usual-setting">
+            <p>隐私设置</p>
+            <div id="set-privacy-setting" class="into-set">&#62;</div>
+        </div>
+        <div id="set-shield" class="usual-setting">
+            <p>屏蔽设置</p>
+            <div id="set-shield-setting" class="into-set">&#62;</div>
+        </div>
+        <div id="set-common" class="usual-setting">
+            <p>通用设置</p>
+            <div id="set-common-setting" class="into-set">&#62;</div>
+        </div>
         <div class="blank-separate"></div>
-        <div id="service-center" class="usual-setting"></div>
-        <div id="about-bolo" class="usual-setting"></div>
+        <div id="service-center" class="usual-setting">
+            <p>客服中心</p>
+            <div id="service-center-setting" class="into-set">&#62;</div>
+        </div>
+        <div id="about-bolo" class="usual-setting">
+            <p>关于菠萝</p>
+            <div id="about-bolo-setting" class="into-set">&#62;</div>
+        </div>
+        <div class="blank-separate-last"></div>
+        <input type="button" value="退出当前帐号" id="exit-account">
     </div>
+    <!-- 个人信息编辑 -->
+    <div id="personal-editor">
+        <div id="editor-return">
+            <div id="editor-return-button">&#60;</div>
+        </div>
+        <div class="editor-blank"></div>
+        <div id="portrait-editor">
+            <div id="head-portrait-editor">
+                <img src="images/personal/camera.png" alt="">
+                <div id="head-portrait-editor-cover"></div>
+            </div>
+        </div>
+        <div class="editor-blank"></div>
+        <div id="personal-message-editor">
+            <p id="editor-message-content">个人信息</p>
+            <p id="editor-button">编辑</p>
+        </div>
+        <div id="editor-name" class="editor-content">
+            <p>昵称&#160;<input type="text"></p>
+        </div>
+        <div id="editor-intro" class="editor-content">
+            <p>简介&#160;<input type="text"></p>
+        </div>
+        <div id="editor-sex" class="editor-content">
+            <p>性别&#160;<input type="text"></p>
+        </div>
+        <div id="editor-birthday" class="editor-content">
+            <p>生日&#160;<input type="text"></p>
+        </div>
+        <div id="editor-school" class="editor-content">
+            <p>学校&#160;<input type="text"></p>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="jquery-3.4.1.js"></script>
+    
 </body>
 </html>
