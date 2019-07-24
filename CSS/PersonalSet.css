@@ -1,0 +1,15 @@
+#setting-title {
+    width: 100vw;
+    height: 11.67vw;
+    background: rgb(27, 27, 226,0.3);
+    position: relative;
+}
+#setting-title span {
+    line-height: 11.67vw;
+    position: absolute;
+}
+#setting-title-text {
+    
+    margin: 0 auto;
+    line-height: 11.67vw;
+}
