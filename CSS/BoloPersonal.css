@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html {
+    font-size: 10px;
+    font-family: 'SimHei';
+}
+@media screen and (min-width:355px) and (max-width:365px) {
+    html {
+        font-size: 9.6px;
+    }
+}
+@media screen and (min-width:408px) and (max-width:412px) {
+    html {
+        font-size: 10.96px;
+    }
+}
+@media screen and (min-width:315px) and (max-width:325px) {
+    html {
+        font-size: 8.533px;
+    }
+}
+@media screen and (min-width:413px) and (max-width:418px) {
+    html {
+        font-size: 11.04px;
+    }
+}
+@media screen and (min-width:765px) and (max-width:770px) {
+    html {
+        font-size: 20.48px;
+    }
+}
+@media screen and (min-width:1020px) and (max-width:1028px) {
+    html {
+        font-size: 27.2px;
+    }
+}
+
+#top-blank {
+    width: 100vw;
+    height: 7.936vw;
+    background: rgb(73, 73, 73,0.3);
+}
+/* 顶部内容 */
+#top-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 7.936vw;
+}
+#top-return {
+    width: 9.617vw;
+    height: 100%;
+    /* background: url(../images/personal/top-return.png) no-repeat 90% center; */
+    /* margin-left: 2vw; */
+}
+#top-return a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/personal/top-return.png) no-repeat center;
+    background-size: 45%;
+    margin-left: 20%;
+}
+#me {
+    height: 100%;
+    line-height: 160%;
+    font-size: 1.8rem;
+}
+#setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.617vw;
+    height: 100%;
+}
+#setting img {
+    width: 58%;
+}
+/* 头部内容 */
+/* 个人信息 */
+#personal-details {
+    display: flex;
+    width: 100vw;
+    height: 27.341vw;
+    /* background: rgb(247, 11, 11,0.3); */
+    background: url(../images/personal/background-bolo.png) no-repeat 89.45% 100%;
+    background-size: 34.8vw 13.29vw;
+}
+.detail-blank {
+    /* width: 100vw;
+    height: 4.1vw;
+    background: rgb(7, 7, 224,0.3); */
+}
+#personal-content {
+    /* width: 100vw;
+    height: 100%;
+    background: rgb(206, 6, 206,0.3); */
+}
+/* 头像 */
+#personal-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27.29vw;
+    height: 95%;
+    margin-top: 1.3vw;
+}
+#head-portrait {
+    width: 19.59vw;
+    height: 19.59vw;
+    background: url(../images/personal/head-portrait.png) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+}
+/* 个人介绍 */
+#personal-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 63.42vw;
+    height: 95%;
+    margin-left: 0.42vw;
+    margin-top: 1.3vw;
+}
+#personal-name {
+    font-size: 1.8rem;
+    color: #323232;
+    margin-top: 0.4vw
+}
+/* 简介行调整好上下距离 */
+#personal-intro {
+    margin: 1.1vw 0;
+}
+.intro-message {
+    font-size: 1.3rem;
+    color: #9e9e9e;
+}
+/* 查看详情按钮 */
+#check-detail {
+    width: 9.26vw;
+    height: 95%;
+    margin-top: 1.3vw;
+    position: relative;
+}
+#check-button {
+    width: 100%;
+    height: 11.81vw;
+    background: url(../images/personal/check-detail.png) no-repeat center;
+    background-size: 3vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+}
+/* 功能区 */
+#function-zone {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 12.66vw;
+    border-top: 0.2vw solid #dfdfdf;
+    border-bottom: 0.2vw solid #dfdfdf;
+    box-shadow: 0 0 0.1vw 0.2vw #dfdfdf;
+}
+.function {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 9.06vw;
+    height: 100%;
+}
+.function-top-blank {
+    width: 100%;
+    height: 12%;
+}
+.function-value {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    color: #333333;
+    text-align: center;
+}
+.function-text {
+    font-size: 1.2rem;
+    line-height: 0.8rem;
+    color: #b9b9b9;
+}
+.function-bottom-line {
+    width: 8.06vw;
+    height: 1.066vw;
+    background: #ffe300;
+    border-radius: 0.55vw;
+    box-shadow: 0 0 0.1 0.1 #ffe300;
+}
