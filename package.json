@@ -1,0 +1,23 @@
+{
+  "name": "Bolo",
+  "version": "1.0.0",
+  "description": "for the website Bolo NW2019  first cooperation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaolalala/Bolo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaolalala/Bolo/issues"
+  },
+  "homepage": "https://github.com/kaolalala/Bolo#readme",
+  "devDependencies": {
+    "postcss": "^7.0.17"
+  }
+}
