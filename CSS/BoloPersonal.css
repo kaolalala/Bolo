@@ -37,7 +37,9 @@ html {
         font-size: 27.2px;
     }
 }
-
+#personal-show {
+    display: none;
+}
 #top-blank {
     width: 100vw;
     height: 7.936vw;
@@ -164,7 +166,7 @@ html {
     height: 12.66vw;
     border-top: 0.2vw solid #dfdfdf;
     border-bottom: 0.2vw solid #dfdfdf;
-    box-shadow: 0 0 0.1vw 0.2vw #dfdfdf;
+    box-shadow: 0 0 0.1vw 0.08vw #dfdfdf;
 }
 .function {
     display: flex;
@@ -195,4 +197,20 @@ html {
     background: #ffe300;
     border-radius: 0.55vw;
     box-shadow: 0 0 0.1 0.1 #ffe300;
+}
+/* 功能展示 */
+#dynamic-none {
+    width: 58.44vw;
+    height: 31vw;
+    background: url(../images/personal/dynamic-none.png) no-repeat 0% 100%;
+    background-size: 18.99vw;
+    margin-left: 25.74vw;
+    position: relative;
+}
+#dynamic-none p {
+    font-size: 2vw;
+    color: #999999;
+    position: absolute;
+    left: 18.93vw;
+    top: 18.14vw;
 }
