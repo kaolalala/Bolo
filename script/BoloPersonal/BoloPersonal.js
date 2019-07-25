@@ -34,51 +34,12 @@ $(document).ready(() => {
         if(flag == 0){
             editorBtn.text("保存");
             flag = 1;
-            $('.editor-content-cover').css("display","none");//去掉遮盖可以编辑了
-            //编辑内容字体变黑
-            $('.editor-content p').css("color","black");
-            $('.editor-content-text').css("color","black");
-            //性别的选择
-            $(sexContent[0]).text("男");//初始化选择项
-            $(sexContent[1]).text("女");
-            sexSelect.css("opacity","1");
-            for(let i=0;i<sexSelect.length;i++)
-            {
-                $(sexSelect[i]).on("touchend",() => {
-                    sexSelect.css("background","transparent");
-                    $(sexSelect[i]).css("background","yellow");
-                    sex = i;
-                })
-            }
-            for (let i = 0; i < sexContent.length; i++) {
-                $(sexContent[i]).on("touchend", () => {
-                    sexSelect.css("background", "transparent");
-                    $(sexSelect[i]).css("background", "yellow");
-                    sex = i;
-                })
-            }
+            $('.editor-content-text').removeAttr("unselectable");
+            
         }else {
             editorBtn.text("编辑");
             flag = 0;
-            //性别保存
-            sexSelect.css("opacity", "0");//性别选择框
-            $(sexContent[1]).text("");//第二个清空先
-            if(sex == 0){//判断性别0男
-                $(sexContent[0]).text("男");
-                console.log($("#sign-sex").attr("src"));                
-                $("#sign-sex").attr("src", "images/personal/sign-boy.png");
-                console.log($("#sign-sex").attr("src"));
-            }
-            else {
-                $(sexContent[0]).text("女");
-                $("#sign-sex").attr("src", "images/personal/sign-girl.png");
-            }
-            //编辑内容字体变灰
-            $('.editor-content p').css("color", "#818181");
-            $('.editor-content-text').css("color", "#818181");
-            $('.editor-content-cover').css("display", "block");//遮盖盖回去
-            //下面三个编辑反映到个人主页
-            //编辑昵称
+            $('.editor-content-text').attr("unselectable", "unselectable");
             if ($('#editor-content-name').val() == '') {
                 $('#personal-name-text').text('无')
             }
