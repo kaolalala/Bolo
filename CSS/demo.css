@@ -48,7 +48,7 @@ body {
 
 .search input {
 	width: 54vw;
-	height: 3.2vw;
+	height: 5vw;
 	background: rgb(241, 241, 241);
 	border-radius: 50px;
 	font-size: 14px;
@@ -57,7 +57,7 @@ body {
 
 .search {
 	width: 54vw;
-	height: 3.2vw;
+	height: 5vw;
 	display: inline-block;
 }
 
@@ -77,7 +77,7 @@ body {
 .person {
 	width: 4.3vw;
 	height: 4.3vw;
-	background: url(../images/JImg/person.jpg) no-repeat;
+	background: url(../images/JImg/person.png) no-repeat;
 	background-size: 100% 100%;
 	display: inline-block;
 	margin-right: 4vw;
@@ -86,7 +86,7 @@ body {
 .news {
 	width: 4.8vw;
 	height: 3.4vw;
-	background: url(../images/JImg/news.jpg) no-repeat;
+	background: url(../images/JImg/news.png) no-repeat;
 	background-size: 100% 100%;
 	margin-right: 4vw;
 	display: inline-block;
@@ -95,7 +95,7 @@ body {
 .submit {
 	width: 5vw;
 	height: 5vw;
-	background: url(../images/JImg/more.jpg) no-repeat;
+	background: url(../images/JImg/more.png) no-repeat;
 	display: inline-block;
 	background-size: 100% 100%;
 	vertical-align: top;
@@ -123,10 +123,11 @@ body {
 	width: 100vw;
 	height: 2vw;
 	background: rgb(247, 245, 245);
+	margin-bottom: 3vw;
 }
 
 .post {
-	padding: 3vw 4vw;
+	padding: 0vw 4vw;
 }
 
 .profile {
@@ -161,7 +162,7 @@ body {
 
 .share {
 	display: inline-block;
-	background: url(../images/JImg/share.jpg) no-repeat;
+	background: url(../images/JImg/share.png) no-repeat;
 	background-size: 100% 100%;
 	width: 3.4vw;
 	height: 3.4vw;
@@ -180,9 +181,11 @@ body {
 
 
 .content-text {
-	font-size: 1.4rem;
+	font-size: 3.7vw;
 	/*letter-spacing: 5px;*/
 	color: #999999;
+	/*如果不设置max-width的话，会出现字数变多时，字号突然增大的情况*/
+	max-height:9999px;
 }
 .content-pic {
 	/*font-size: 0;*/
@@ -235,7 +238,7 @@ body {
 }
 
 .repeat-img {
-	background: url(../images/JImg/repeat.jpg) no-repeat;
+	background: url(../images/JImg/repeat.png) no-repeat;
 	background-size: 100% 100%;
 	width: 3.47vw;
 	height: 3.2vw;
