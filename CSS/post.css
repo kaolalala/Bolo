@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: none;
+}
+.header{
+    width: 100vw;
+    height: 15.47vw;
+    background-color: rgb(249, 249, 249);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw; 
+    box-sizing: border-box;
+}
+.header>div{
+    display: inline-block;
+    font-size: 4.3vw;
+}
+.send{
+    height: 7.3vw;
+    width: 15.2vw;
+    background-color: rgb(255, 227, 0);
+    text-align: center;
+    line-height: 7.3vw;
+    border-radius: 2vw;
+}
+textarea{
+    border: none;
+    outline: none;
+    width: 92vw;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    margin-top: 4.3vw;
+    font-size: 4.3vw;
+}
+.add{
+    width: 25.6vw;
+    height: 25.6vw;
+    margin-left: 4vw;
+    background-image: url(../images/kaola/add.png);
+    background-size: 100%;
+}
