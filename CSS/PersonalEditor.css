@@ -36,6 +36,14 @@
     background-size: cover;
     position: relative;
 }
+#editor-img-file{/*头像编辑图片文件*/
+    width: 20.55vw;
+    height: 20.55vw;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+}
 #head-portrait-editor img {
     width: 9.44vw;
 }
@@ -83,6 +91,7 @@
     height: 10vw;
     background: transparent;
     position: absolute;
+    top: 0;
     z-index: 10;/*置顶*/
 }
 .editor-content p {

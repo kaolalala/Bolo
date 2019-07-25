@@ -30,9 +30,7 @@ $(document).ready(() => {
     //设置开始编辑按钮
     let flag = 0;//判断当前是编辑还是保存
     let sex = 0;//判断男女0男1女
-    // console.log($("#sign-sex").attr("src"));
-    $("#sign-sex").attr("src", "images/personal/sign-girl.png");
-    editorBtn.on("touchend",(e) => {//编辑与保存按钮点击
+    editorBtn.on("click",(e) => {//编辑与保存按钮点击
         if(flag == 0){
             editorBtn.text("保存");
             flag = 1;
@@ -82,10 +80,10 @@ $(document).ready(() => {
             //下面三个编辑反映到个人主页
             //编辑昵称
             if ($('#editor-content-name').val() == '') {
-                $('#personal-name').text('无')
+                $('#personal-name-text').text('无')
             }
             else {
-               $('#personal-name').text($('#editor-content-name').val());
+                $('#personal-name-text').text($('#editor-content-name').val());
             }
             //编辑简介
             $('#personal-intro span').text($('#editor-content-intro').val());
@@ -98,4 +96,13 @@ $(document).ready(() => {
             }
         }
     })
+    //功能区的切换
+    let functionZone = $('.function');
+    for (let i = 0; i < functionZone.length;i++)
+    {
+        $(functionZone[i]).on('click',() => {
+            $('.function-bottom-line').css("opacity","0");
+            $($('.function-bottom-line')[i]).css("opacity", "1");
+        })
+    }
 })

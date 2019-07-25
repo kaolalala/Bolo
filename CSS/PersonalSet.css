@@ -53,12 +53,10 @@
 #exit-account {
     width: 100vw;
     height: 10.56vw;
-    border: none;
-    outline: none;
-    /* line-height: 10.56vw; */
+    line-height: 10.56vw;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.18vw;
-    /* text-align: center; */
+    text-align: center;
     background: #fade00;
 }
