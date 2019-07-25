@@ -27,12 +27,12 @@ $(document).ready(() => {
         if(flag == 0){
             $('#editor-button').text("保存");
             flag = 1;
-            $('.editor-content-text').removeAttr("readonly");
+            $('.editor-content-text').removeAttr("unselectable");
             
         }else {
             $('#editor-button').text("编辑");
             flag = 0;
-            $('.editor-content-text').attr("readonly", "readonly");
+            $('.editor-content-text').attr("unselectable", "unselectable");
             if ($('#editor-content-name').val() == '') {
                 $('#personal-name').text('无')
             }
