@@ -84,6 +84,8 @@
     margin-left: 3.33vw;
 }
 .editor-content p input {
+    width: 70vw;
+    height: 7.5vw;
     font-size: 1.4rem;
     border: none;
     outline: none;
