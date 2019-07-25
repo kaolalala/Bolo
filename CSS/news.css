@@ -1,5 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
 #news_header {
-    height: 11.4vw;
+    height: 11.7vw;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -12,7 +22,7 @@
     background-image: url(../images/news/return.png);
     background-position: center;
     background-size: cover;
-    margin-left: 15px;
+    margin-left: 4vw;
 }
 
 #news_title {
@@ -27,7 +37,7 @@
     vertical-align: middle;
 }
 
-#newsTitle {
+#newsText {
     font-size: 1rem;
     display: inline-block;
     letter-spacing: 0.1rem;
@@ -37,7 +47,6 @@
 
 #itemsBox {
     height: 11.4vw;
-    width: 100%;
     background-color: #F6F6F6;
     box-sizing: border-box;
     padding: 0 11.7vw;
@@ -47,7 +56,147 @@
 }
 
 .item {
-    display: inline-block;
+    /* 每一个选项 */
     font-size: 1rem;
     line-height: 1.25rem;
+    position: relative;
+}
+
+.select_line {
+    /* 选项选中的横线 */
+    position: absolute;
+    bottom: -2.1vw;
+    height: 1.1vw;
+    width: 9.9vw;
+    background-color: #FFE300;
+    border-radius: 0.8vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#discussPart {
+    /* “评论”板块 */
+    margin: 0 9.1vw 0 6.9vw;
+}
+
+.oneDiscussion {
+    /* 一条评论 */
+    padding: 2.7vw 0 2.1vw;
+    border-bottom: 1.5px solid #999999;
+}
+
+.user {
+    height: 10.7vw;
+    font-size: 0;
+    margin-left: 1.3vw;
+    position: relative;
+}
+
+.headPortrait {
+    /* 用户头像 */
+    height: 10.7vw;
+    width: 10.7vw;
+    border-radius: 5.35vw;
+    background-image: url(../images/news/headPortrait1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.userformation {
+    display: inline-block;
+    height: 10.7vw;
+    box-sizing: border-box;
+    width: 71vw;
+    padding-left: 1.3vw;
+    vertical-align: top;
+}
+
+.user_name {
+    font-size: 0.875rem;
+    font-family: "黑体";
+    color: #333333;
+    position: absolute;
+    top: 0;
+}
+
+.user_date {
+    color: #999999;
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.day, .time {
+    display: inline-block;
+    font-size: 0.625rem;
+    font-family: "黑体";
+}
+
+.time {
+    margin-left: 1.8vw;
+}
+
+.reply {
+    height: 5.6vw;
+    line-height: 5.6vw;
+    width: 10.7vw;
+    border-radius: 1.6vw;
+    background-color: #EEEEEE;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #333333;
+    font-size: 0.75rem;
+    font-family: "黑体";
+    text-align: center;
+}
+
+.text {
+    max-width: 100%;
+    font-size: 0.875rem;
+    font-family: "黑体";
+    line-height: 1rem;
+    margin: 3.2vw 0 1.3vw;
+}
+
+.article {
+    height: 13.9vw;
+    font-size: 0;
+}
+
+.article_image {
+    height: 13.9vw;
+    width: 13.9vw;
+    background-image: url(../images/news/image1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.reply_Object {
+    height: 13.9vw;
+    width: 69vw;
+    display: inline-block;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    padding: 2.5vw 2.5vw;
+    vertical-align: top;
+}
+
+.replyName {
+    font-size: 0;
+}
+
+.poundsign, .object_user {
+    font-size: 0.75rem;
+    font-family: "黑体";
+    display: inline-block;
+}
+.object_content{
+    font-size: 0.75rem;
+    font-family: "黑体";
+    color: #434343;
 }

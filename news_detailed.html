@@ -3,118 +3,124 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scaleable=no>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>news</title>
-    <link rel="stylesheet" href="CSS/news.css">
+    <title>news_detailed</title>
+    <link rel="stylesheet" href="CSS/news_detailed.css">
+    <script src="script/jquery-3.4.1.js"></script>
 </head>
 
 <body>
-        <div id="detailed_header">
-            <div id="detailed_returnLogo"></div>
+    <div id="detailed_image_bg">
+        <img src="" alt="image" id="detailed_image">
+    </div>
+    <div id="detailed_header">
+        <div id="detailed_returnLogo"></div>
+    </div>
+    <div id="topLine"></div>
+    <div class="detailed_body">
+        <div class="personal">
+            <div class="headPortrait"></div>
+            <div class="username">新技术可能</div>
+            <div class="attaintion">+关注</div>
+            <img src="images/news/click_more.png" alt="click_more" id="click_more">
         </div>
-        <div id="topLine"></div>
-        <div class="detailed_body">
-            <div class="personal">
-                <div class="headPortrait"></div>
-                <div class="username">新技术可能</div>
-                <div class="attaintion">+关注</div>
-                <img src="images/news/click_more.png" alt="click_more" id="click_more">
-            </div>
-            <div class="detailedArticle">
-                生活就像海洋，只有意志坚强的人才能到岸，只有意志坚强的程序员才能超神，加油吧骚年。生活就海洋，只有意志坚强的人才能到彼岸，只有意志坚强的程序员才能超神，加油吧骚年生活就像海洋，只有意志坚强的人才能到彼岸，只有意志坚强的程序员才能超神，加油吧骚年。
-            </div>
-            <div class="detailedImages">
-                <div id="image1"></div>
-                <div id="image2"></div>
-                <div id="image3"></div>
-            </div>
-            <div class="detailedFooter">
-                <div class="articleDate">07-15</div>
-                <div class="interation">
-                    <div id="transpond">
-                        <img src="images/news/transpond.png" alt="tranpond" id="transpondIcon">
-                        <div class="total">10</div>
-                    </div>
-                    <div id="collect">
-                        <img src="images/news/collect.png" alt="collect" id="collectIcon">
-                        <div class="total">11</div>
-                    </div>
-                    <div id="like">
-                        <img src="images/news/like.png" alt="like" id="likeIcon">
-                        <div class="total">12</div>
-                    </div>
-                    <div id="discuss">
-                        <img src="images/news/discuss.png" alt="discuss" id="discussIcon">
-                        <div class="total">13</div>
-                    </div>
+        <div class="detailedArticle">
+            生活就像海洋，只有意志坚强的人才能到岸，只有意志坚强的程序员才能超神，加油吧骚年。生活就海洋，只有意志坚强的人才能到彼岸，只有意志坚强的程序员才能超神，加油吧骚年生活就像海洋，只有意志坚强的人才能到彼岸，只有意志坚强的程序员才能超神，加油吧骚年。
+        </div>
+        <div class="detailedImages">
+            <div id="image1"></div>
+            <div id="image2"></div>
+            <div id="image3"></div>
+        </div>
+        <div class="detailedFooter">
+            <div class="articleDate">07-15</div>
+            <div class="interation">
+                <div id="transpond">
+                    <img src="images/news/transpond.png" alt="tranpond" id="transpondIcon">
+                    <div class="total">10</div>
+                </div>
+                <div id="collect">
+                    <img src="images/news/collect.png" alt="collect" id="collectIcon">
+                    <div class="total">11</div>
+                </div>
+                <div id="like">
+                    <img src="images/news/like.png" alt="like" id="likeIcon">
+                    <div class="total">12</div>
+                </div>
+                <div id="discuss">
+                    <img src="images/news/discuss.png" alt="discuss" id="discussIcon">
+                    <div class="total">13</div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- 第一个评论开始 -->
-        <div class="discussPart">
-            <div class="otherUser">
-                <div class="otherHeadPortrait"></div>
-                <div class="otherContent">
-                    <div class="otherUsername">Dyondx</div>
-                    <div class="discussText">
-                        <div class="firstDiscuss">
-                            这也太强了吧，哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    <!-- 第一个评论开始 -->
+    <div class="discussPart">
+        <div class="otherUser">
+            <div class="otherHeadPortrait"></div>
+            <div class="otherContent">
+                <div class="otherUsername">Dyondx</div>
+                <div class="discussText">
+                    <div class="firstDiscuss">
+                        这也太强了吧，哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                    </div>
+                    <div class="secondDiscuss">
+                        <div class="oneScondDiscuss">
+                            <div class="secondDiscuss_name">Psychic</div>
+                            <div class="colon">：</div>
+                            <div class="secondDiscuss_content">真的吗哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈红红火火恍恍惚惚</div>
                         </div>
-                        <div class="secondDiscuss">
-                            <div class="oneScondDiscuss">
-                                <div class="secondDiscuss_name">Psychic</div>
-                                <div class="colon">：</div>
-                                <div class="secondDiscuss_content">真的吗哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈红红火火恍恍惚惚</div>
-                            </div>
-                            <div class="oneScondDiscuss">
-                                <div class="secondDiscuss_name">小明</div>
-                                <div class="colon">：</div>
-                                <div class="secondDiscuss_content">欢迎来到广东男子职业技术学院，我们这里盛产gay</div>
-                            </div>
+                        <div class="oneScondDiscuss">
+                            <div class="secondDiscuss_name">小明</div>
+                            <div class="colon">：</div>
+                            <div class="secondDiscuss_content">欢迎来到广东男子职业技术学院，我们这里盛产gay</div>
                         </div>
                     </div>
-                    <div class="discuss_like">
-                        <img src="images/news/like.png" alt="like" id="likeIcon">
-                        <div class="discuss_total">12</div>
-                    </div>
+                </div>
+                <div class="discuss_like">
+                    <img src="images/news/like.png" alt="like" id="likeIcon">
+                    <div class="discuss_total">12</div>
                 </div>
             </div>
         </div>
-        <!-- 第一个评论结束 -->
+    </div>
+    <!-- 第一个评论结束 -->
 
-        <!-- 第二个评论开始 -->
-        <div class="discussPart">
-            <div class="otherUser">
-                <div class="otherHeadPortrait"></div>
-                <div class="otherContent">
-                    <div class="otherUsername">1bin</div>
-                    <div class="discussText">
-                        <div class="firstDiscuss">
-                            我觉得一般般
+    <!-- 第二个评论开始 -->
+    <div class="discussPart">
+        <div class="otherUser">
+            <div class="otherHeadPortrait"></div>
+            <div class="otherContent">
+                <div class="otherUsername">1bin</div>
+                <div class="discussText">
+                    <div class="firstDiscuss">
+                        我觉得一般般
+                    </div>
+                    <div class="secondDiscuss">
+                        <div class="oneScondDiscuss">
+                            <div class="secondDiscuss_name">小红</div>
+                            <div class="colon">：</div>
+                            <div class="secondDiscuss_content">you can you up, no can no bb</div>
                         </div>
-                        <div class="secondDiscuss">
-                            <div class="oneScondDiscuss">
-                                <div class="secondDiscuss_name">小红</div>
-                                <div class="colon">：</div>
-                                <div class="secondDiscuss_content">you can you up, no can no bb</div>
-                            </div>
-                            <div class="oneScondDiscuss">
-                                <div class="secondDiscuss_name">艹公子</div>
-                                <div class="colon">：</div>
-                                <div class="secondDiscuss_content">都9102年了，还有人说你行你上</div>
-                            </div>
+                        <div class="oneScondDiscuss">
+                            <div class="secondDiscuss_name">艹公子</div>
+                            <div class="colon">：</div>
+                            <div class="secondDiscuss_content">都9102年了，还有人说你行你上</div>
                         </div>
                     </div>
-                    <div class="discuss_like">
-                        <img src="images/news/like.png" alt="like" id="likeIcon">
-                        <div class="discuss_total">6</div>
-                    </div>
+                </div>
+                <div class="discuss_like">
+                    <img src="images/news/like.png" alt="like" id="likeIcon">
+                    <div class="discuss_total">6</div>
                 </div>
             </div>
         </div>
-        <!-- 第二个评论结束 -->
+    </div>
+    <!-- 第二个评论结束 -->
+
+    <script src="script/news/news_detailed.js"></script>
 </body>
 
 </html>
