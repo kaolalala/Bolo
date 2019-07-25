@@ -133,6 +133,9 @@ html {
     color: #323232;
     margin-top: 0.4vw
 }
+#sign-sex {/*性别标志*/
+    width: 5vw;
+}
 /* 简介行调整好上下距离 */
 #personal-intro {
     margin: 1.1vw 0;
