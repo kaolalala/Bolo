@@ -31,7 +31,7 @@
                         <div id="head-portrait"></div>
                     </div>
                     <div id="personal-message">
-                        <p id="personal-name">Dyondx</p>
+                        <p id="personal-name">Dyondx&#160;&#160;<img src="images/personal/sign-boy.png" alt="" id="sign-sex"></p>
                         <p id="personal-intro" class="intro-message">简介: <span>今日五博,听日点挥霍</span></p>
                         <p id="personal-school" class="intro-message">学校: <span>暂无介绍</span></p>
                     </div>
@@ -135,24 +135,29 @@
             <p id="editor-button">编辑</p>
         </div>
         <div id="editor-name" class="editor-content">
-            <p>昵称&#160;<input type="text"></p>
+            <p>昵称&#160;&#160;<input type="text" class="editor-content-text" id="editor-content-name" value="Dyondx" maxlength="18"></p>
+            <div class="editor-content-cover"></div>
         </div>
         <div id="editor-intro" class="editor-content">
-            <p>简介&#160;<input type="text"></p>
+            <p>简介&#160;&#160;<input type="text" class="editor-content-text" id="editor-content-intro" value="今日五博,听日点挥霍" maxlength="25"></p>
+            <div class="editor-content-cover"></div>
         </div>
         <div id="editor-sex" class="editor-content">
-            <p>性别&#160;<input type="text"></p>
+            <p>性别&#160;&#160;<span class="sex-select sex-boy"></span><span class="sex-content sex-boy">男</span><span class="sex-select sex-girl"></span><span class="sex-content sex-girl"></span></p>
+            <div class="editor-content-cover"></div>
         </div>
         <div id="editor-birthday" class="editor-content">
-            <p>生日&#160;<input type="text"></p>
+            <p>生日&#160;&#160;<input type="date"  class="editor-content-text" ></p>
+            <div class="editor-content-cover"></div>
         </div>
         <div id="editor-school" class="editor-content">
-            <p>学校&#160;<input type="text"></p>
+            <p>学校&#160;&#160;<input type="text" class="editor-content-text" id="editor-content-school" value="" maxlength="15"></p>
+            <div class="editor-content-cover"></div>
         </div>
     </div>
 
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    <script src="jquery-3.4.1.js"></script>
-    
+    <script src="script/jquery-3.4.1.js"></script>
+    <script src="script/BoloPersonal/BoloPersonal.js"></script>
 </body>
 </html>

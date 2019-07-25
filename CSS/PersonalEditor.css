@@ -75,6 +75,15 @@
     width: 100vw;
     height: 10vw;
     border-bottom: 0.32vw solid #ececec;
+    background: #ffffff;
+    position: relative;
+}
+.editor-content-cover {/*遮盖住编辑,让其不可编辑 */
+    width: 95vw;
+    height: 10vw;
+    background: transparent;
+    position: absolute;
+    z-index: 10;/*置顶*/
 }
 .editor-content p {
     height: 100%;
@@ -84,7 +93,23 @@
     margin-left: 3.33vw;
 }
 .editor-content p input {
+    width: 70vw;
+    height: 7.5vw;
     font-size: 1.4rem;
     border: none;
     outline: none;
+    color: #818181;
+}
+.sex-select {
+    display: inline-block;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.2vw solid rgb(48, 47, 47);
+    margin-left: 6.94vw;
+    opacity: 0;
+}
+.sex-content {
+    margin-left: 1.11vw;
 }

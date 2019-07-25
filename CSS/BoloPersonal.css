@@ -38,7 +38,7 @@ html {
     }
 }
 #personal-show {
-    display: none;
+    /* display: none; */
 }
 #top-blank {
     width: 100vw;
@@ -80,6 +80,7 @@ html {
 }
 #setting img {
     width: 58%;
+    opacity: 0.8;
 }
 /* 头部内容 */
 /* 个人信息 */
@@ -131,6 +132,9 @@ html {
     font-size: 1.8rem;
     color: #323232;
     margin-top: 0.4vw
+}
+#sign-sex {/*性别标志*/
+    width: 5vw;
 }
 /* 简介行调整好上下距离 */
 #personal-intro {
