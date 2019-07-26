@@ -77,11 +77,13 @@ body {
     border-radius: 0.8vw;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
 }
 
 #discussPart {
     /* “评论”板块 */
     margin: 0 9.1vw 0 6.9vw;
+    display: none;
 }
 
 .oneDiscussion {
@@ -195,7 +197,7 @@ body {
     font-size: 0;
 }
 
-.poundsign, .object_user {
+.atsign, .object_user {
     font-size: 0.75rem;
     font-family: "黑体";
     display: inline-block;
@@ -209,4 +211,260 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/* 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+#likemePart {
+    /* “赞我”板块 */
+    margin: 0 9.1vw 0 6.9vw;
+    display: none;
+}
+
+.oneLikeme {
+    /* 一条赞我的消息 */
+    padding: 2.7vw 0 2.1vw;
+    border-bottom: 1.5px solid #DDDDDD;
+}
+
+.likemeUser {
+    height: 10.7vw;
+    font-size: 0;
+    margin-left: 1.3vw;
+    position: relative;
+}
+
+.likemeHeadPortrait {
+    /* 赞我的用户头像 */
+    height: 10.7vw;
+    width: 10.7vw;
+    border-radius: 5.35vw;
+    background-image: url(../images/news/headPortrait1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.likemeUserformation {
+    /* 赞我的用户的信息 */
+    display: inline-block;
+    height: 10.7vw;
+    box-sizing: border-box;
+    width: 18.7vw;
+    padding-left: 1.3vw;
+    margin-right: 1.5vw;
+    vertical-align: top;
+}
+
+.likemeUser_name {
+    /* 赞我的用户的用户名 */
+    font-size: 0.875rem;
+    font-family: "黑体";
+    color: #333333;
+    position: absolute;
+    top: 0;
+}
+
+.likemeUser_date {
+    /* 赞我的日期 */
+    color: #999999;
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.likemeDay, .likemeTime {
+    display: inline-block;
+    font-size: 0.625rem;
+    font-family: "黑体";
+}
+
+.likemeTime {
+    margin-left: 1.8vw;
+}
+
+.likemeDescript {
+    /* “赞了我的 XX” */
+    font-size: 0;
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+}
+
+.descript_left, .descript_right {
+    font-size: 0.75rem;
+    font-family: "黑体";
+    display: inline-block;
+}
+
+.descript_left img {
+    margin-right: 1.6vw;
+    width: 4vw;
+}
+
+.likemeObject {
+    /* 点赞的文章或评论 */
+    height: 10.7vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    display: inline-block;
+}
+
+.likemeObject_image {
+    height: 10.7vw;
+    width: 10.7vw;
+    display: inline-block;
+    background-image: url(../images/news/image3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+
+.likemeText {
+    height: 10.7vw;
+    width: 21vw;
+    background-color: #EEEEEE;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 2vw;
+    font-size: 0;
+}
+.text_box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.text_at, .text_name {
+    font-size: 0.625rem;
+    font-family: "黑体";
+    display: inline-block;
+}
+
+.text_content {
+    width: 17vw;
+    font-size: 0.5rem;
+    font-family: "黑体";
+    color: #434343;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+#atMePart {
+    /* “@我”板块 */
+    margin: 0 9.1vw 0 6.9vw;
+    display: none;
+}
+
+.oneatMe {
+    /* 一条@我的消息 */
+    padding: 2.7vw 0 2.1vw;
+    border-bottom: 1.5px solid #DDDDDD;
+}
+
+.atMeUser {
+    height: 10.7vw;
+    font-size: 0;
+    margin-left: 1.3vw;
+    position: relative;
+}
+
+.atMeHeadPortrait {
+    /* @我的用户头像 */
+    height: 10.7vw;
+    width: 10.7vw;
+    border-radius: 5.35vw;
+    background-image: url(../images/news/headPortrait1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.atMeUserformation {
+    /* @我的用户的信息 */
+    display: inline-block;
+    height: 10.7vw;
+    box-sizing: border-box;
+    width: 18.7vw;
+    padding-left: 1.3vw;
+    margin-right: 2vw;
+    vertical-align: top;
+}
+
+.atMeUser_name {
+    /* @我的用户的用户名 */
+    font-size: 0.875rem;
+    font-family: "黑体";
+    color: #333333;
+    position: absolute;
+    top: 0;
+}
+
+.atMeUser_date {
+    /* @我的日期 */
+    color: #999999;
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.atMeDay, .atMeTime {
+    display: inline-block;
+    font-size: 0.625rem;
+    font-family: "黑体";
+}
+
+.atMeTime {
+    margin-left: 1.8vw;
+}
+
+.atMeDescript {
+    /* “提到了你” */
+    font-size: 0.625rem;
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    color: #999999;
+}
+
+.atMeObject {
+    /* @我的文章或评论 */
+    height: 10.7vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    display: inline-block;
+}
+
+.atMeObject_image {
+    height: 10.7vw;
+    width: 10.7vw;
+    display: inline-block;
+    background-image: url(../images/news/image3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.atMeText {
+    height: 10.7vw;
+    width: 21vw;
+    line-height: 5vw;
+    background-color: #EEEEEE;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 2vw;
+    font-size: 0.625rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
 }
