@@ -1,5 +1,5 @@
 #personal-setting {
-    display: none;
+    /* display: none; */
 }
 #setting-title {
     width: 100vw;
@@ -42,8 +42,8 @@
 .into-set {
     width: 10.83vw;
     height: 100%;
-    line-height: 10.56vw;
-    text-align: center;
+    background: url(../images/personal/top-return3.png) no-repeat center;
+    background-size: 1.4vw;
 }
 .blank-separate-last {
     width: 100vw;
