@@ -117,6 +117,23 @@ $(document).ready(() => {
             headPortrait.style.backgroundSize = "cover";
         }
     }
+//编辑区的简介变宽
+    // let editorContentIntro = $('#editor-content-intro');//简介的文本框
+    // editorContentIntro.on("focus",() => {
+    //     if (editorContentIntro.val().substring(0, 38).length > 19) {
+    //     $('#editor-intro').css("height", "14vw");
+    //     console.log($('#editor-intro').css("height"));
+    // }
+    // })
+    let editorContentIntro = document.getElementById('editor-content-intro');
+    console.log(editorContentIntro.innerText);
+    function changeHeight() {
+        if (editorContentIntro.innerText.length > 19) {
+            document.getElementById('editor-intro').style.height = "14vw";
+            console.log(document.getElementById('editor-intro').style.height);
+        }
+        }
+    editorContentIntro.onclick = changeHeight();
 })
 //函数进入设置
 /* 

@@ -81,7 +81,7 @@
 }
 .editor-content {
     width: 100vw;
-    height: 10vw;
+    /* height: 10vw; */
     border-bottom: 0.32vw solid #ececec;
     background: #ffffff;
     position: relative;
@@ -95,13 +95,16 @@
     z-index: 10;/*置顶*/
 }
 .editor-content p {
-    height: 100%;
+    height: 10vw;
     font-size: 1.4rem;
     line-height: 10vw;
     color: #818181;
     margin-left: 4.33vw;
 }
-.editor-content p input {
+#editor-intro {/*简介的高度*/
+    height: 14vw;
+}
+.editor-content-text {
     width: 70vw;
     height: 7.5vw;
     font-size: 1.4rem;
@@ -109,6 +112,10 @@
     outline: none;
     color: #818181;
     position: relative;
+}
+ #editor-content-intro {/*编辑简介 */
+    vertical-align: text-top;
+    height: 7.8vw;
 }
 .editor-content-title {
     /* display: inline-block; */
