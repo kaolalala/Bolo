@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    -webkit-tap-highlight-color: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .header{
     width: 100vw;
@@ -37,10 +37,29 @@ textarea{
     margin-top: 4.3vw;
     font-size: 4.3vw;
 }
-.add{
+.pic{
+    width: 92vw;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 1vw;
+}
+.pic>div{
+    display: inline-block;
     width: 25.6vw;
     height: 25.6vw;
-    margin-left: 4vw;
+    /* background-size: 100% 100%; */
+    vertical-align: middle;
+    margin: 1vw;
+}
+.add{
     background-image: url(../images/kaola/add.png);
-    background-size: 100%;
+}
+.add>input{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    opacity: 0;
 }
