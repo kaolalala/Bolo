@@ -6,6 +6,9 @@ $(document).ready(() => {
     let editorBtn = $('#editor-button');//编辑与保存切换按钮
     let sexSelect = $('.sex-select');//性别选择按钮
     let sexContent = $('.sex-content');//性别内容
+    let file = document.getElementById('editor-img-file');//文件传输头像
+    let headPortraitEditor = document.getElementById('head-portrait-editor');//编辑区的头像
+    let headPortrait = document.getElementById('head-portrait');//头像
     // 主页进入设置
     PageChange(setting, setPage,homepage);
     // 设置返回主页
@@ -102,6 +105,17 @@ $(document).ready(() => {
             $('.function-bottom-line').css("opacity","0");
             $($('.function-bottom-line')[i]).css("opacity", "1");
         })
+    }
+    //换头像
+    file.onchange = () => {
+        let readFile = new FileReader();
+        readFile.readAsDataURL(file.files[0]);
+        readFile.onloadend = function () {
+            headPortraitEditor.style.background = `url(${readFile.result}) no-repeat center`;
+            headPortraitEditor.style.backgroundSize = "cover";
+            headPortrait.style.background = `url(${readFile.result}) no-repeat center`;
+            headPortrait.style.backgroundSize = "cover";
+        }
     }
 })
 //函数进入设置
