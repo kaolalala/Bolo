@@ -144,6 +144,14 @@ body {
 #personal-intro {
     margin: 1.1vw 0;
 }
+#personal-intro  span {
+    display: inline-block;
+    width: 35vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
 .intro-message {
     font-size: 1.3rem;
     color: #9e9e9e;
