@@ -4,6 +4,7 @@
 	text-decoration: none;
 	border: none;
 	list-style: none;
+	outline: none;
 }
 
 html {
@@ -31,7 +32,7 @@ body {
 
 .header {
 	width: 100vw;
-	height: 13vw;
+	height: 14.4vw;
 }
 
 .logo {
@@ -47,30 +48,38 @@ body {
 }
 
 .search input {
-	width: 54vw;
-	height: 5vw;
 	background: rgb(241, 241, 241);
-	border-radius: 50px;
-	font-size: 14px;
 	vertical-align: middle;
+	line-height: 5vw;
+	padding-left: 4.8vw;
+	display: inline-block;
+	font-size: 3.7vw;
+	letter-spacing: 2.8px;
+	width: 45vw;
 }
 
 .search {
-	width: 54vw;
+	width: 50vw;
 	height: 5vw;
 	display: inline-block;
+	padding-left: 1.87vw;
+	background: rgb(241, 241, 241);
+	border-radius: 50px;
 }
-
-.search::before {
+.s-logo
+{
 	width: 2.6vw;
 	height: 2.6vw;
-	background: url(../images/JImg/search.jpg) no-repeat;
+	background: url(../images/JImg/搜索，放大镜.png) no-repeat;
 	background-size: 100% 100%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .tab {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
+	/*vertical-align: middle;*/
 	margin-left: 4vw;
 }
 
@@ -117,8 +126,15 @@ body {
 	font-size: 1.6rem;
 	margin: 0 auto;
 	display: inline-block;
+	/*border-bottom: 1.8vw solid #FFE300 ;*/
 }
-
+.rec span{
+	width: 3.3rem;
+	height: 1.8vw;
+	border-radius:50px ;
+	display: block;
+	background: #FFE300;
+}
 .gray {
 	width: 100vw;
 	height: 2vw;
@@ -128,6 +144,7 @@ body {
 
 .post {
 	padding: 0vw 4vw;
+	/*letter-spacing: 2.8px;*/
 }
 
 .profile {
@@ -146,7 +163,7 @@ body {
 
 .id {
 	display: inline-block;
-	font-size: 20px;
+	font-size: 1.6rem;
 }
 
 .tag-right {
@@ -156,8 +173,12 @@ body {
 
 .add-follow {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 1.4rem;
 	vertical-align: middle;
+	background: #FFE300;
+	border-radius: 15px;
+	margin-right: 4vw;
+	padding: 0.6vw;
 }
 
 .share {
@@ -186,6 +207,7 @@ body {
 	color: #999999;
 	/*如果不设置max-width的话，会出现字数变多时，字号突然增大的情况*/
 	max-height:9999px;
+	letter-spacing: 2.8px;
 }
 .content-pic {
 	/*font-size: 0;*/
@@ -234,7 +256,7 @@ body {
 	display: inline-block;
 	font-size: 1rem;
 	color: #868686;
-	margin-left: 1.2vw;
+	margin-left: 3.2vw;
 }
 
 .repeat-img {
@@ -263,4 +285,7 @@ body {
 	background-size: 100% 100%;
 	width: 3.2vw;
 	height: 3.2vw;
+}
+.current{
+	color: #FFE300;
 }
