@@ -3,9 +3,17 @@
     padding: 0;
     text-decoration: none;
 }
+/* ios设配点击事件闪现黑灰色背景 */
+*{
+    -webkit-tap-highlight-color: transparent; /*   设置为透明 */
+    -webkit-appearance:none;
+ }
 html {
     font-size: 10px;
     font-family: 'SimHei';
+}
+body {
+    min-height: 100vh;
 }
 @media screen and (min-width:355px) and (max-width:365px) {
     html {
@@ -40,17 +48,12 @@ html {
 #personal-show {
     /* display: none; */
 }
-#top-blank {
-    width: 100vw;
-    height: 7.936vw;
-    background: rgb(73, 73, 73,0.3);
-}
 /* 顶部内容 */
 #top-content {
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 7.936vw;
+    height: 11.672vw;
 }
 #top-return {
     width: 9.617vw;
@@ -68,7 +71,7 @@ html {
 }
 #me {
     height: 100%;
-    line-height: 160%;
+    line-height: 250%;
     font-size: 1.8rem;
 }
 #setting {
@@ -76,11 +79,11 @@ html {
     justify-content: center;
     align-items: center;
     width: 9.617vw;
-    height: 100%;
+    height: 95%;
 }
 #setting img {
     width: 58%;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 /* 头部内容 */
 /* 个人信息 */
@@ -135,6 +138,7 @@ html {
 }
 #sign-sex {/*性别标志*/
     width: 5vw;
+    margin-left: 3.5vw;
 }
 /* 简介行调整好上下距离 */
 #personal-intro {
@@ -159,7 +163,6 @@ html {
     position: absolute;
     top: 0;
     bottom: 0;
-
     margin: auto;
 }
 /* 功能区 */
@@ -181,18 +184,18 @@ html {
 }
 .function-top-blank {
     width: 100%;
-    height: 12%;
+    height: 15%;
 }
 .function-value {
     width: 100%;
     font-size: 1.5rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
     color: #333333;
     text-align: center;
 }
 .function-text {
     font-size: 1.2rem;
-    line-height: 0.8rem;
+    line-height: 0.6rem;
     color: #b9b9b9;
 }
 .function-bottom-line {
@@ -201,6 +204,10 @@ html {
     background: #ffe300;
     border-radius: 0.55vw;
     box-shadow: 0 0 0.1 0.1 #ffe300;
+    opacity: 0;
+}
+.function-bottom-line1 {
+    opacity: 1;
 }
 /* 功能展示 */
 #dynamic-none {
@@ -209,6 +216,7 @@ html {
     background: url(../images/personal/dynamic-none.png) no-repeat 0% 100%;
     background-size: 18.99vw;
     margin-left: 25.74vw;
+    margin-top: 26vw;
     position: relative;
 }
 #dynamic-none p {

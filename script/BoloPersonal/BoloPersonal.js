@@ -6,33 +6,23 @@ $(document).ready(() => {
     let editorBtn = $('#editor-button');//编辑与保存切换按钮
     let sexSelect = $('.sex-select');//性别选择按钮
     let sexContent = $('.sex-content');//性别内容
+    let file = document.getElementById('editor-img-file');//文件传输头像
+    let headPortraitEditor = document.getElementById('head-portrait-editor');//编辑区的头像
+    let headPortrait = document.getElementById('head-portrait');//头像
     // 主页进入设置
-    setting.on("touchend",(e) => {
-        homepage.css("display","none");
-        setPage.css("display","block");
-    })
+    PageChange(setting, setPage,homepage);
     // 设置返回主页
-    $('#setting-return').on("touchend",(e) => {
-        homepage.css("display","block");
-        setPage.css("display","none");
-    })
+    PageChange($('#setting-return'),homepage,setPage);
     // 主页进入编辑
-    $('#check-button').on("touchend", (e) => {
-        homepage.css("display", "none");
-        editorPage.css("display", "block");
-    })
+    PageChange($('#check-button'), editorPage, homepage);
     //编辑返回主页
-    $('#editor-return-button').on("touchend",(e) => {
-        homepage.css("display", "block");
-        editorPage.css("display", "none");
-    })
+    PageChange($('#editor-return-button'), homepage, editorPage);
+    
     // 编辑页面
     //设置开始编辑按钮
     let flag = 0;//判断当前是编辑还是保存
-    let sex = 0;//判断男女0男1女
-    // console.log($("#sign-sex").attr("src"));
-    $("#sign-sex").attr("src", "images/personal/sign-girl.png");
-    editorBtn.on("touchend",(e) => {//编辑与保存按钮点击
+    let sex = 2;//判断男女0男1女现在2是不男不女
+    editorBtn.on("click",(e) => {//编辑与保存按钮点击
         if(flag == 0){
             editorBtn.text("保存");
             flag = 1;
@@ -41,38 +31,47 @@ $(document).ready(() => {
             $('.editor-content p').css("color","black");
             $('.editor-content-text').css("color","black");
             //性别的选择
-            $(sexContent[0]).text("男");//初始化选择项
+            $('#sex-last-select').text("")//初始化选择项
+            $(sexContent[0]).text("男");
             $(sexContent[1]).text("女");
             sexSelect.css("opacity","1");
-            for(let i=0;i<sexSelect.length;i++)
-            {
-                $(sexSelect[i]).on("touchend",() => {
-                    sexSelect.css("background","transparent");
-                    $(sexSelect[i]).css("background","yellow");
-                    sex = i;
-                })
-            }
-            for (let i = 0; i < sexContent.length; i++) {
-                $(sexContent[i]).on("touchend", () => {
-                    sexSelect.css("background", "transparent");
-                    $(sexSelect[i]).css("background", "yellow");
-                    sex = i;
-                })
-            }
+            // for(let i=0;i<sexSelect.length;i++)
+            // {
+            //     $(sexSelect[i]).on("touchend",() => {
+            //         sexSelect.css("background","transparent");
+            //         $(sexSelect[i]).css("background","yellow");
+            //         sex = i;
+            //     })
+            // }
+            // for (let i = 0; i < sexContent.length; i++) {
+            //     $(sexContent[i]).on("touchend", () => {
+            //         sexSelect.css("background", "transparent");
+            //         $(sexSelect[i]).css("background", "yellow");
+            //         sex = i;
+            //     })
+            // }
+            $('#select-boy').on("touchend", () => {
+                sexSelect.css("background", "transparent");
+                $(sexSelect[0]).css("background", "yellow");
+                sex = 0;
+            })
+            $('#select-girl').on("touchend", () => {
+                sexSelect.css("background", "transparent");
+                $(sexSelect[1]).css("background", "yellow");
+                sex = 1;
+            })
         }else {
             editorBtn.text("编辑");
             flag = 0;
             //性别保存
             sexSelect.css("opacity", "0");//性别选择框
-            $(sexContent[1]).text("");//第二个清空先
+            $(sexContent).text("");//第二个清空先
             if(sex == 0){//判断性别0男
-                $(sexContent[0]).text("男");
-                console.log($("#sign-sex").attr("src"));                
+                $('#sex-last-select').text("男");              
                 $("#sign-sex").attr("src", "images/personal/sign-boy.png");
-                console.log($("#sign-sex").attr("src"));
             }
-            else {
-                $(sexContent[0]).text("女");
+            else if(sex == 1){
+                $('#sex-last-select').text("女");
                 $("#sign-sex").attr("src", "images/personal/sign-girl.png");
             }
             //编辑内容字体变灰
@@ -82,10 +81,10 @@ $(document).ready(() => {
             //下面三个编辑反映到个人主页
             //编辑昵称
             if ($('#editor-content-name').val() == '') {
-                $('#personal-name').text('无')
+                $('#personal-name-text').text('无')
             }
             else {
-               $('#personal-name').text($('#editor-content-name').val());
+                $('#personal-name-text').text($('#editor-content-name').val());
             }
             //编辑简介
             $('#personal-intro span').text($('#editor-content-intro').val());
@@ -98,4 +97,37 @@ $(document).ready(() => {
             }
         }
     })
+    //功能区的切换
+    let functionZone = $('.function');
+    for (let i = 0; i < functionZone.length;i++)
+    {
+        $(functionZone[i]).on('click',() => {
+            $('.function-bottom-line').css("opacity","0");
+            $($('.function-bottom-line')[i]).css("opacity", "1");
+        })
+    }
+    //换头像
+    file.onchange = () => {
+        let readFile = new FileReader();
+        readFile.readAsDataURL(file.files[0]);
+        readFile.onloadend = function () {
+            headPortraitEditor.style.background = `url(${readFile.result}) no-repeat center`;
+            headPortraitEditor.style.backgroundSize = "cover";
+            headPortrait.style.background = `url(${readFile.result}) no-repeat center`;
+            headPortrait.style.backgroundSize = "cover";
+        }
+    }
 })
+//函数进入设置
+/* 
+* name: PageChange
+* description: 页面切换
+* peram: 
+* return: none
+*/
+let PageChange = (btn,pageShow,pageHide) => {
+    btn.on("touchend",() => {
+        pageShow.css("display", "block");
+        pageHide.css("display", "none");
+    })
+}
