@@ -35,21 +35,6 @@ $(document).ready(() => {
             $(sexContent[0]).text("男");
             $(sexContent[1]).text("女");
             sexSelect.css("opacity","1");
-            // for(let i=0;i<sexSelect.length;i++)
-            // {
-            //     $(sexSelect[i]).on("touchend",() => {
-            //         sexSelect.css("background","transparent");
-            //         $(sexSelect[i]).css("background","yellow");
-            //         sex = i;
-            //     })
-            // }
-            // for (let i = 0; i < sexContent.length; i++) {
-            //     $(sexContent[i]).on("touchend", () => {
-            //         sexSelect.css("background", "transparent");
-            //         $(sexSelect[i]).css("background", "yellow");
-            //         sex = i;
-            //     })
-            // }
             $('#select-boy').on("touchend", () => {
                 sexSelect.css("background", "transparent");
                 $(sexSelect[0]).css("background", "yellow");
@@ -60,6 +45,8 @@ $(document).ready(() => {
                 $(sexSelect[1]).css("background", "yellow");
                 sex = 1;
             })
+            //字数剩余多少
+            numberWords.innerText = 36 - editorContentIntro.value.length;
         }else {
             editorBtn.text("编辑");
             flag = 0;
@@ -95,6 +82,8 @@ $(document).ready(() => {
             else {
                 $('#personal-school span').text($('#editor-content-school').val());
             }
+            //字数先不显示
+            $('#number-words').text('');
         }
     })
     //功能区的切换
@@ -117,23 +106,16 @@ $(document).ready(() => {
             headPortrait.style.backgroundSize = "cover";
         }
     }
-//编辑区的简介变宽
-    // let editorContentIntro = $('#editor-content-intro');//简介的文本框
-    // editorContentIntro.on("focus",() => {
-    //     if (editorContentIntro.val().substring(0, 38).length > 19) {
-    //     $('#editor-intro').css("height", "14vw");
-    //     console.log($('#editor-intro').css("height"));
-    // }
-    // })
+//编辑区的简介变宽以及字数剩余的多少
     let editorContentIntro = document.getElementById('editor-content-intro');
-    console.log(editorContentIntro.innerText);
-    function changeHeight() {
-        if (editorContentIntro.innerText.length > 19) {
-            document.getElementById('editor-intro').style.height = "14vw";
+    let numberWords = document.getElementById('number-words');//字数
+    editorContentIntro.oninput =(e) => {
+        numberWords.innerText = 36 - editorContentIntro.value.length;
+        if (editorContentIntro.value.length > 19) {
+            document.getElementById('editor-intro').style.height = "15.5vw";
             console.log(document.getElementById('editor-intro').style.height);
         }
-        }
-    editorContentIntro.onclick = changeHeight();
+    }
 })
 //函数进入设置
 /* 

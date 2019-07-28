@@ -101,9 +101,9 @@
     color: #818181;
     margin-left: 4.33vw;
 }
-#editor-intro {/*简介的高度*/
+/* #editor-intro {简介的高度
     height: 14vw;
-}
+} */
 .editor-content-text {
     width: 70vw;
     height: 7.5vw;
@@ -115,11 +115,15 @@
 }
  #editor-content-intro {/*编辑简介 */
     vertical-align: text-top;
-    height: 7.8vw;
+    height: 8.8vw;
 }
 .editor-content-title {
     /* display: inline-block; */
     margin-right: 3.2vw;
+}
+#number-words { /*剩余字数多少*/
+    vertical-align: top;
+    margin-left: 2.5vw;
 }
 .sex-select {
     display: inline-block;
@@ -135,6 +139,7 @@
     margin-left: 1.11vw;
 }
 #select-boy {
+    display: block;
     width: 11vw;
     height: 5vw;
     position: absolute;
@@ -143,6 +148,7 @@
     z-index: 3;
 }
 #select-girl {
+    display: block;
     width: 11vw;
     height: 5vw;
     position: absolute;
