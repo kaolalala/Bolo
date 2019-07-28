@@ -1,3 +1,4 @@
+//点赞
 $(".like").click(function(){
 	let oLikeNum = $(this).find('.like-num');
 	let likeNum = oLikeNum.text();
