@@ -113,7 +113,8 @@ $(document).ready(() => {
         numberWords.innerText = 36 - editorContentIntro.value.length;
         if (editorContentIntro.value.length > 19) {
             document.getElementById('editor-intro').style.height = "15.5vw";
-            console.log(document.getElementById('editor-intro').style.height);
+        }else{
+            document.getElementById('editor-intro').style.height = "8.8vw";
         }
     }
 })
