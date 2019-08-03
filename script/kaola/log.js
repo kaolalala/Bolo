@@ -46,7 +46,6 @@ function regTest() {
             }
         }
     )
-
     $(".register").click(
         function registerTest() {
             let register_phone = $("#register_phone").val();

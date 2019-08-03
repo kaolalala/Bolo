@@ -68,7 +68,7 @@ $(document).ready(() => {
             //下面三个编辑反映到个人主页
             //编辑昵称
             if ($('#editor-content-name').val() == '') {
-                $('#personal-name-text').text('无')
+                $('#personal-name-text').text('无');
             }
             else {
                 $('#personal-name-text').text($('#editor-content-name').val());
@@ -84,6 +84,28 @@ $(document).ready(() => {
             }
             //字数先不显示
             $('#number-words').text('');
+            //AJAX请求后台保存到数据库
+            $.ajax({
+                //请求方式
+                type: "GET",
+                //请求的媒体类型
+                contentType: "application/json;charset=UTF-8",
+                //请求地址
+                url: 'http://localhost:3000/editor',
+                //数据，json字符串JSON.stringify(list)
+                data: { act: 'editor',user: `123456789`, name: `${$('#personal-name-text').text()}`, intro: `${$('#personal-intro span').text()}`, sex: `${$('#sex-last-select').text()}`, school: `${$('#personal-school span').text()}`  },
+                //请求成功
+                success: function (str) {
+                    let json = eval('('+ str +')');
+                    console.log("json : ", json);
+                    console.log('ojbk');
+                },
+                //请求失败，包含具体的错误信息
+                error: function (e) {
+                    console.log(e.status);
+                    console.log(e.responseText);
+                }
+            })
         }
     })
     //功能区的切换

@@ -46,7 +46,7 @@ body {
     }
 }
 #personal-show {
-    display: none;
+    /* display: none; */
 }
 /* 顶部内容 */
 #top-content {
