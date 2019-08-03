@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var onlyUser;//定义一个全局当前用户
-
+onlyUser = '没有得到当前用户值';//定义一个全局当前用户(8月3号onlyUser还没有运用成功,从登陆界面进入可以得到,但是单纯刷新就不可以)
+//(8月3号  可以了,把var去掉,就OK了了)
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var userLogin = require('./routes/userLogin.js');
