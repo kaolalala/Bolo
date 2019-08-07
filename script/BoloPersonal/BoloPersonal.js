@@ -6,9 +6,13 @@ $(document).ready(() => {
     let editorBtn = $('#editor-button');//编辑与保存切换按钮
     let sexSelect = $('.sex-select');//性别选择按钮
     let sexContent = $('.sex-content');//性别内容
-    let file = document.getElementById('editor-img-file');//文件传输头像
-    let headPortraitEditor = document.getElementById('head-portrait-editor');//编辑区的头像
-    let headPortrait = document.getElementById('head-portrait');//头像
+    // let file = document.getElementById('editor-img-file');//文件传输头像
+    // let headPortraitEditor = document.getElementById('head-portrait-editor');//编辑区的头像
+    // let headPortrait = document.getElementById('head-portrait');//头像
+    let headPortraitImage = $('#head-portrait').css("backgroundImage");//jq头像的背景图片
+    let file = $('#editor-img-file');
+    let headPortraitEditor = $('#head-portrait-editor');
+    let headPortrait = $('#head-portrait');
     // 主页进入设置
     PageChange(setting, setPage,homepage);
     // 设置返回主页
@@ -93,7 +97,7 @@ $(document).ready(() => {
                 //请求地址
                 url: 'http://localhost:3000/editor',
                 //数据，json字符串JSON.stringify(list)
-                data: { act: 'editor',user: `123456789`, name: `${$('#personal-name-text').text()}`, intro: `${$('#personal-intro span').text()}`, sex: `${$('#sex-last-select').text()}`, school: `${$('#personal-school span').text()}`  },
+                data: { act: 'editor', user: `123456789`, name: `${$('#personal-name-text').text()}`, intro: `${$('#personal-intro span').text()}`, sex: `${$('#sex-last-select').text()}`, school: `${$('#personal-school span').text()}`, src: `${headPortraitImage}` },
                 //请求成功
                 success: function (str) {
                     let json = eval('('+ str +')');
@@ -118,16 +122,48 @@ $(document).ready(() => {
         })
     }
     //换头像
-    file.onchange = () => {
+    // file.onchange = () => {
+    //     let readFile = new FileReader();
+    //     readFile.readAsDataURL(file.files[0]);
+    //     readFile.onloadend = function () {
+    //         headPortraitEditor.style.background = `url(${readFile.result}) no-repeat center`;
+    //         headPortraitEditor.style.backgroundSize = "cover";
+    //         headPortrait.style.background = `url(${readFile.result}) no-repeat center`;
+    //         headPortrait.style.backgroundSize = "cover";
+    //     }
+    // }
+    file.on("change",()=>{
+        console.log(headPortraitEditor.css("backgroundImage"));
         let readFile = new FileReader();
-        readFile.readAsDataURL(file.files[0]);
+        // console.log(file.prop('files'));
+        let url = file.prop('files')[0];
+        readFile.readAsDataURL(url);
         readFile.onloadend = function () {
-            headPortraitEditor.style.background = `url(${readFile.result}) no-repeat center`;
-            headPortraitEditor.style.backgroundSize = "cover";
-            headPortrait.style.background = `url(${readFile.result}) no-repeat center`;
-            headPortrait.style.backgroundSize = "cover";
+            headPortraitEditor.css("backgroundImage", `url(${readFile.result})`);
+            headPortrait.css("backgroundImage", `url(${readFile.result})`);
+            $.ajax({
+                //请求方式
+                type: "GET",
+                //请求的媒体类型
+                contentType: "application/json;charset=UTF-8",
+                //请求地址
+                url: 'http://localhost:3000/portrait',
+                //数据，json字符串JSON.stringify(list)
+                data: { act: 'portrait', user: `123456789`, src: `${headPortrait.css("backgroundImage")}` },
+                //请求成功
+                success: function (str) {
+                    let json = eval('(' + str + ')');
+                    console.log("json : ", json);
+                    console.log('ojbk');
+                },
+                //请求失败，包含具体的错误信息
+                error: function (e) {
+                    console.log(e.status);
+                    console.log(e.responseText);
+                }
+            })
         }
-    }
+    })
 //编辑区的简介变宽以及字数剩余的多少
     let editorContentIntro = document.getElementById('editor-content-intro');
     let numberWords = document.getElementById('number-words');//字数

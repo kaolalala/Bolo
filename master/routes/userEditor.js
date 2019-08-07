@@ -23,7 +23,7 @@ router.get('/editor', (req, res) => {
     //     }
     //     // res.end();
     // });
-    db.query("UPDATE `user_message` SET name=?,intro=?,sex=?,school=? WHERE user=?",[GET.name,GET.intro,GET.sex,GET.school,GET.user],(err,data)=>{
+    db.query("UPDATE `user_message` SET name=?,intro=?,sex=?,school=?,src=? WHERE user=?",[GET.name,GET.intro,GET.sex,GET.school,GET.src,GET.user],(err,data)=>{
         if(err){
             res.send('出错了', err);
         }else{
@@ -32,6 +32,18 @@ router.get('/editor', (req, res) => {
             console.log(onlyUser);
         }
     }) ;
+});
+router.get('/portrait', (req, res) => {
+    let GET = req.query;
+    db.query("UPDATE `user_message` SET src=? WHERE user=?", [GET.src, GET.user], (err, data) => {
+        if (err) {
+            res.send('出错了', err);
+        } else {
+            console.log("存入数据库");
+            res.send("{ok: true}");
+            console.log(onlyUser);
+        }
+    });
 });
 
 

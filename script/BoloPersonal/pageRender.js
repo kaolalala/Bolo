@@ -17,7 +17,9 @@ $(function(){
         $('#personal-intro span').text(`${json.data.intro}`);
         $('#sex-last-select').text(`${json.data.sex}`);
         $('#personal-school span').text(`${json.data.school}`);
+        $('#head-portrait').css("backgroundImage", `${json.data.src}`);//头像
         //编辑区的
+        $('#head-portrait-editor').css("backgroundImage", `${json.data.src}`);//头像
         $('#editor-content-name').val(`${json.data.name}`);
         $('#editor-content-intro').val(`${json.data.intro}`);
         $('#sex-last-select').text(`${json.data.sex}`);
